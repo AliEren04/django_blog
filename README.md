@@ -46,7 +46,7 @@ python manage.py runserver
 * MongoDB
 ## 🛠 Additional Skills
 
-* Passionate about mobile development using Flutter for various applications.
+* Passionate about mobile development.
 
 * Experience with web technologies for small to moderate projects.
 
