@@ -66,7 +66,6 @@
     
                     <ul class="s-header__nav">
                         <li class="current-menu-item"><a href="{% url 'blog:home' %}" title="DevEx">Home</a></li>
-                        <li><a href="{% url 'blog:blog' %}" title="Blog">Blog</a></li>
                         <li><a href="{% url 'blog:about' %}" title="About">About</a></li>
                         <li><a href="{% url 'blog:contact' %}" title="Contact">Contact</a></li>
                     </ul> <!-- end s-header__nav -->
@@ -112,94 +111,27 @@
 
             <!-- hero -->
             <div class="hero">
-
-                <div class="hero__slider swiper-container">
-
-                    <div class="swiper-wrapper">
-                        <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image" style="background-image: url('{% static 'images/thumbs/featured/featured-01_2000.jpg' %}');"></div>
-
-                                <div class="hero__entry-text-inner">
-                                    <div class="hero__entry-meta">
-                                        <span class="cat-links">
-                                            <a href="#">Inspiration</a>
-                                        </span>
-                                    </div>
-                                    <h2 class="hero__entry-title">
-                                        <a href="{% url 'blog:blog' %}">
-                                            Understanding and Using Negative Space.
-                                        </a>
-                                    </h2>
-                                    <p class="hero__entry-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                    nostrud corporis est laudantium voluptatum consectetur adipiscing. 
-                                    </p>
-                                    <a class="hero__more-link" href="{% url 'blog:blog' %}">Read More</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image">
-                                <img src="{% static 'images/thumbs/featured/featured-02_2000.jpg' %}" alt="">
-                            </div>
-                            <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
-                                    <div class="hero__entry-meta">
-                                        <span class="cat-links">
-                                            <a href="#">Health</a>
-                                        </span>
-                                    </div>
-                                    <h2 class="hero__entry-title">
-                                        <a href="{% url 'blog:blog' %}">
-                                            10 Reasons Why Being in Nature Is Good For You.
-                                        </a>
-                                    </h2>
-                                    <p class="hero__entry-desc">
-                                    Voluptas harum sequi rerum quasi quisquam. Est tenetur ut doloribus in aliquid animi nostrum. Tempora 
-                                    quibusdam ad nulla. Quis autem possimus dolores est est fugiat saepe vel aut. Earum consequatur.
-                                    </p>
-                                    <a class="hero__more-link" href="{% url 'blog:blog' %}">Read More</a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="hero__slide swiper-slide">
-                            <div class="hero__entry-image">
-                                <img src="{% static 'images/thumbs/featured/featured-03_2000.jpg' %}" alt="">
-                            </div>
-                            <div class="hero__entry-text">
-                                <div class="hero__entry-text-inner">
-                                    <div class="hero__entry-meta">
-                                        <span class="cat-links">
-                                            <a href="#">Lifestyle</a>
-                                        </span>
-                                    </div>
-                                    <h2 class="hero__entry-title">
-                                        <a href="{% url 'blog:blog' %}">
-                                            Six Relaxation Techniques to Reduce Stress.
-                                        </a>
-                                    </h2>
-                                    <p class="hero__entry-desc">
-                                    Quasi consequatur quia excepturi ullam velit. Repellat velit vel occaecati neque perspiciatis quibusdam nulla. 
-                                    Unde et earum. Nostrum nulla optio debitis odio modi. Quis autem possimus dolores est est fugiat saepe vel aut.
-                                    </p>
-                                    <a class="hero__more-link" href="{% url 'blog:blog' %}">Read More</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div> <!-- swiper-wrapper -->
-
-                    <div class="swiper-pagination"></div>
-    
+                           
+                <div class="hero__entry-text-inner">
+                    <div class="hero__entry-meta">
+                        <h2 class="hero__entry-title">
+                            <a href="{% url 'blog:blog' %}">
+                                DevEx Is My Personal Blog Where Developer Experiences Are Shared Including Mine In This Journey
+                            </a>
+                        </h2>
+            
+                        <p class="hero__entry-desc">
+                            I am <strong>Ali Eren Tabak</strong> and trying to become a <strong>Backend Developer</strong>. I want to make my expertise in <strong>Python and frameworks such as Flask and Django.</strong> <strong>In Flask, I am more experienced and comfortable compared to Django</strong>. However, <strong>I am actively improving my Django skills because it's a bigger and more complete framework, suitable for large projects and MVPs due to its batteries-included philosophy.</strong>
+            
+                            Additionally, I know basic networking and cybersecurity foundations to make my backend apps stronger in security. In this personal blog, I plan to share my development experiences — and preferably those of other developers too.
+            
+                            Also: anime lover, gamer, and problem-solver — mostly through existing tools rather than reinventing the wheel <strong>(pragmatic approach)</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
                 </div> <!-- end hero slider -->
-
-                <a href="#bricks" class="hero__scroll-down smoothscroll">
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
-                    </svg>
-                    <span>Scroll</span>
-                </a>
 
             </div> <!-- end hero -->
 
@@ -254,29 +186,6 @@
                                         srcset="{% static 'images/thumbs/masonry/beetle-600.jpg' %} 1x, {% static 'images/thumbs/masonry/beetle-1200.jpg' %} 2x" alt="">
                                 </a>
                             </div> <!-- end entry__thumb -->
-        
-                            <div class="entry__text">
-                                <div class="entry__header">
-                                    <div class="entry__meta">
-                                        <span class="cat-links">
-                                            <a href="#">Lifestyle</a>
-                                        </span>
-                                        <span class="post-date">
-                                            By:
-                                            <a href="#0">Sasuke Uchiha</a>
-                                        </span>
-                                    </div>
-                                    <h1 class="entry__title"><a href="{% url 'blog:blog' %}">Throwback To The Good Old Days.</a></h1>
-                                </div>
-                                <div class="entry__excerpt">
-                                    <p>
-                                    Ipsam odio corrupti et dolores odit aliquid quo. Dolore consectetur a sit modi quam debitis non omnis. Enim ullam 
-                                    voluptatem ipsum soluta sed debitis nihil quasi. Et et et sit. Lorem ipsum Sed eiusmod esse aliqua sed incididunt.
-                                    </p>
-                                </div>
-                                <a class="entry__more-link" href="#0">Read More</a>
-                            </div> <!-- end entry__text -->
-                        
                         </article> <!-- end article -->
 
                         <article class="brick entry" data-animate-el>
@@ -625,41 +534,6 @@
                     </div> <!-- end bricks-wrapper -->
 
                 </div> <!-- end masonry-->
-
-
-                <!-- pagination -->
-                <div class="row pagination">
-                    <div class="column lg-12">
-                        <nav class="pgn">
-                            <ul>
-                                <li>
-                                    <a class="pgn__prev" href="#0">
-                                        <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 6.75L4.75 12L10.25 17.25"></path>
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 12H5"></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li><a class="pgn__num" href="#0">1</a></li>
-                                <li><span class="pgn__num current">2</span></li>
-                                <li><a class="pgn__num" href="#0">3</a></li>
-                                <li><a class="pgn__num" href="#0">4</a></li>
-                                <li><a class="pgn__num" href="#0">5</a></li>
-                                <li><span class="pgn__num dots">…</span></li>
-                                <li><a class="pgn__num" href="#0">8</a></li>
-                                <li>
-                                    <a class="pgn__next" href="#0">
-                                        <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.75 6.75L19.25 12L13.75 17.25"></path>
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 12H4.75"></path>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav> <!-- end pgn -->
-                    </div> <!-- end column -->
-                </div> <!-- end pagination -->
-
             </div> <!-- end bricks -->
 
         </section> <!-- end s-content -->
@@ -669,37 +543,13 @@
         ================================================== -->
         <footer id="colophon" class="s-footer">
 
-            <div class="row s-footer__subscribe">
-                <div class="column lg-12">
-
-                    <h2>
-                    Subscribe to Our Newsletter.
-                    </h2>
-                    <p>
-                    Subscribe now to get all latest updates
-                    </p>
-
-                    <form id="mc-form" class="mc-form">
-                        <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center" placeholder="Your Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-                        <input type="submit" name="subscribe" value="Subscribe" class="btn--small btn--primary u-fullwidth">
-                        <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cdb7b577e41181934ed6a6a44_9a91cfe7b3" tabindex="-1" value=""></div> -->
-                        <div class="mc-status"></div>
-                    </form>
-
-                </div>
-            </div> <!-- end s-footer__subscribe -->
-
             <div class="row s-footer__main">
 
                 <div class="column lg-5 md-6 tab-12 s-footer__about">
-                    <h4>Spurgeon</h4>
+                    <h4>DevEx</h4>
 
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo 
+                    DevEx is A Personal Where My Personal And Other Developer experiences that i know are shared.
                     </p>
                 </div> <!-- end s-footer__about -->
 
