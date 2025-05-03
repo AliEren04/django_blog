@@ -24,7 +24,7 @@
 
 ```bash
 git clone https://github.com/AliEren04/django_blog.git
-cd devex-blog
+cd django_blog
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
