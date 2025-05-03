@@ -23,7 +23,7 @@
 ## 📦 Setup
 
 ```bash
-git clone https://github.com/your-username/devex-blog.git
+git clone https://github.com/AliEren04/django_blog.git
 cd devex-blog
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
