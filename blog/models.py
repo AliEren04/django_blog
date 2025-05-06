@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Post(models.Model):
+    image = models.ImageField(upload_to='images/', null=False, default= 'images/default.webp' )
     title = models.CharField(max_length=200)
     created_by = models.CharField(max_length=200)
     text = models.TextField()
