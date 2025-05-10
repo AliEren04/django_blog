@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render
 from .forms import CommentForm
 from .models import Post, Comment
-
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -16,17 +16,22 @@ def about(request):
 def contact(request):
     return render(request, 'blog/contact.html')
 
-def blog(request, post_id):
-        related_post = get_object_or_404(Post, post_id) # When using utility first model then parameter id taken
+def post(request, post_id):
+        related_post = Post.objects.get(id=post_id)
+        comments = Comment.objects.filter(post=related_post)
         if request.method == "POST": 
             form = CommentForm(request.POST)
             if form.is_valid(): 
-                name  = form.cleaned_data["name"]
-                body = form.cleaned_data["body"]
-                Comment.objects.create(post= related_post, name = name, body = body)
-                return redirect() #path of html and post id to redirect in that post
+                comment = form.save(commit=False)
+                comment.post = related_post
+                comment.save()
+                messages.success(request, "Comment Published Successfully!")
+
+            else:
+                 messages.error(request, "Error While Publishing Comment!") 
         else:
-            return CommentForm() 
+            form = CommentForm()
+        return render(request, 'blog/blog.html', {'form':form,'post':related_post, 'comments':comments})
 
         
 

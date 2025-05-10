@@ -115,9 +115,9 @@
                 <div class="hero__entry-text-inner">
                     <div class="hero__entry-meta">
                         <h2 class="hero__entry-title">
-                            <a href="{% url 'blog:blog' %}">
+                            <p>
                                 DevEx Is My Personal Blog Where Developer Experiences Are Shared Including Mine In This Journey
-                            </a>
+                            </p>
                         </h2>
             
                         <p class="hero__entry-desc">
@@ -149,7 +149,7 @@
                         <article class="brick entry" data-animate-el>
         
                             <div class="entry__thumb">
-                                <a href="{% url 'blog:blog' %}" class="thumb-link">
+                                <a href="{% url 'blog:post' post_id=post.id %}" class="thumb-link">
                                     <img src="{{ post.image.url }}" srcset="{{ post.image.url|add:'?size=600' }} 1x, {{ post.image.url|add:'?size=1200' }} 2x" alt="{{ post.title }}">
                                 </a>
                             </div> <!-- end entry__thumb -->
@@ -165,14 +165,14 @@
                                             <a href="#0">{{ post.created_by }}</a>
                                         </span>
                                     </div>
-                                    <h1 class="entry__title"><a href="{% url 'blog:blog' %}">{{ post.title }}</a></h1>
+                                    <h1 class="entry__title"><a href="{% url 'blog:post' post_id=post.id %}">{{ post.title }}</a></h1>
                                  </div>
                                 <div class="entry__excerpt">
                                     <p>
                                         {{ post.text }}
                                     </p>
                                 </div>
-                                <a class="entry__more-link" href="#0">Read More</a>
+                                <a class="entry__more-link" href="{% url 'blog:post' post_id=post.id %}">Read More</a>
                             </div> <!-- end entry__text -->
                         
                         </article> <!-- end article -->
@@ -197,7 +197,7 @@
                     <h4>DevEx</h4>
 
                     <p>
-                    DevEx is A Personal Where My Personal And Other Developer experiences that i know are shared.
+                    DevEx is A Personal Blog Where My Personal And Other Developer experiences that i know are shared.
                     </p>
                 </div> <!-- end s-footer__about -->
 
@@ -207,7 +207,6 @@
                             <h4>Site Links</h4>
                             <ul class="link-list">
                                 <li><a href="{% url 'blog:home' %}">Home</a></li>
-                                <li><a href="{% url 'blog:blog' %}">Blog</a></li>
                                 <li><a href="{% url 'blog:about' %}">About</a></li>
                                 <li><a href="{% url 'blog:contact' %}">Contact</a></li>
                             </ul>
